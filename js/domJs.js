@@ -31,12 +31,12 @@ function createDom(dom){
 		var count = dom.childElementCount;
 		console.log("child count: "+count);
 		//console.log("child: "+dom.childNodes);
-		/*for(var i=0; i<dom.childNodes.length; i++){
-			console.log(dom.childNodes[i].data);
-		}*/
-		if(count && dom.childNodes[0] =="undefined" && dom.childNodes[0].data.trim()!="" ){
-			console.log("content: "+dom.childNodes[0].data.trim());
-			tempObj.content =  dom.childNodes[0].data.trim();
+		for(var i=0; i<dom.childNodes.length; i++){
+			console.log(i+":"+dom.childNodes[0].data.trim());
+			if(count==0){
+				console.log("content: 231"+dom.childNodes[0].data.trim());
+				tempObj.content =  dom.childNodes[0].data.trim();
+			}
 		}
 		
 		for(var i =0;i<count;i++){
